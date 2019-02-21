@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+<button class="tablink" onclick="openPage('Home', this, '#4285F4')" id="defaultOpen">Home</button>
+<button class="tablink" onclick="openPage('About Me', this, '#DB4437')">About</button>
+<button class="tablink" onclick="openPage('Contact', this, '#F4B400')">Contact</button>
+<button class="tablink" onclick="openPage('Gallery', this, '#0F9D58');displayImages()">Gallery</button>
+<button class="tablink" onClick="openGalleryAdminPage()"> Gallery Admin </button>
+<div id="Home" class="tabcontent">
+	<h3>Home</h3>
+	<img src="home.jpg"/>
+</div>
+<div id="About Me" class="tabcontent">
+	<h3>About me</h3>
+	<p>
+		I am Preetham, currently doing internship at ZeMoSo labs. I like to spend my time playing ctf's. I upload videos on Abacus on YouTube.
+	</p>
+</div>
+<div id="Contact" class="tabcontent">
+	<div class="container">
+		<div style="text-align:center">
+			<h2>Contact Me</h2>
+		</div>
+		<div class="row">
+			<div class="column">
+				<form name="contactForm">
+					<label for="name">Name</label>
+					<br>	</br>
+					<input type="text" id="name" name="name" placeholder="Your name..">
+					<br>	</br>
+					<label for="country">Country</label>
+					<br>	</br>
+					<select id="country" name="country">
+						<option value="India">Australia</option>
+						<option value="canada">Canada</option>
+						<option value="usa">USA</option>
+					</select>
+					<br>	</br>
+					<label for="email-id"> Email </label>
+					<br>	</br>
+					<input type="text" id="email" name="email">
+					<br>	</br>
+					<input type="submit" value="Submit">
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+<div id="Gallery" class="tabcontent">
+	<h3 style="text-align:center">Gallery</h3>
+	<div class="gallery_row">
+		<div class="gallery_column" id="newImage">
+  <!--
+			<img src="home.jpg">
+			<img src="home.jpg">
+			<img src="home.jpg">
+			<img src="home.jpg">
+			<img src="home.jpg">
+			<img src="home.jpg">
+			<img src="home.jpg">
+			<img src="home.jpg">
+			<img src="home.jpg">
+			<img src="home.jpg">
+			<img src="home.jpg">
+			<img src="home.jpg">
+			<img src="https://tinyurl.com/y968wz7h">
+			<img src="https://tinyurl.com/y968wz7h">
+   -->
+		</div>
+
+	</div>
+</div>
+<script type="text/javascript" src="script.js"> </script>
+</body>
+</html>

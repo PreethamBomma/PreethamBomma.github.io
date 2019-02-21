@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript" src="script.js"> </script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body onload=storeImage()>
+<h2 style="text-align: center"> Gallery-Admin Page </h2>
+<button onclick="displayImageForm()">Add Image</button>
+<button onclick="displayEditForm()">Edit Image</button>
+<button onclick="displayRemoveForm()">Remove Image</button>
+<button onclick="openHomePage()">Go to home page</button>
+
+<br>
+<form name="imageAddForm" id="imageAddForm" onsubmit="validateImageForm(); return false;">
+	<div id="imageForm" style="display: none">
+		<div>
+			<label for="src">src&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+			<input type="text" id="newSrc" name="src" placeholder="source url of image">
+			<br><br>
+			<label for="name">Name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+			<input type="text" id="newName" name="name" placeholder="Image name..">
+			<br><br>
+			<label for="information">Information&nbsp;&nbsp; </label>
+			<input type="text" id="newInformation" name="information">
+			<br><br>
+			<label for="uploadedDate">Upload Date </label>
+			<input type="date" id="newUploadedDate" name="uploadedDate" placeholder="Date">
+			<br><br>
+			<input type="submit" value="Submit">
+		</div>
+	</div>
+</form>
+<form action="" name="imageRemoveForm" onsubmit="removeImage(); return false;">
+	<div id="imageRemoveForm" style="display: none">
+		<div>
+			<label for="src">src&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+			<input type="text" id="removeSrc" name="src" placeholder="source url of image">
+			<br><br>
+			<label for="name">Name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+			<input type="text" id="removeName" name="name" placeholder="Image name..">
+			<br><br>
+			<input type="submit" value="Submit">
+		</div>
+	</div>
+</form>
+<form action="" name="imageEditForm" onsubmit="editImage();return false;">
+	<div id="imageEditForm" style="display: none">
+		<div>
+			<p>
+				 Given a image name, change its corresponding details
+			</p>
+			<label for="name">Name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+			<input type="text" id="editName" name="name" placeholder="Image name..">
+			<br><br>
+			<label for="src">New Src&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+			<input type="text" id="editSrc" name="src" placeholder="source url of image">
+			<br><br>
+			<label for="src">Edit Information&nbsp;&nbsp;&nbsp;&nbsp;</label>
+			<input type="text" id="editInformation" name="src" placeholder="information about image">
+			<br><br>
+			<label for="src">New Date&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+			<input type="date" id="editDate" name="src">
+			<br><br>
+			<input type="submit" value="Submit">
+		</div>
+	</div>
+</form>
+</body>
+</html>
