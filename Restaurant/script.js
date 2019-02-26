@@ -225,7 +225,7 @@ function removeItem(t, i, tableId) {
 
 function closeSession(tableId) {
 
-    alert("Total bill: " + tables[tableId.id].bill);
+    alert("Total bill: " + document.getElementById("totalcost").innerHTML);
     const tableBody = document.getElementById('popup-body');
     document.getElementById("totalcost").innerHTML = "";
     var modal = document.getElementById('myModal');
