@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<div class="tables">
+	<h3 style="text-align:center"> Tables </h3>
+	<input type="search" id="tableName" placeholder="Search table" onkeyup="searchTable()">
+	<br>
+	</br>
+	<div class="table-names" id="table1" ondrop="drop(event, this)" ondragover="allowDrop(event)" onclick="getOrderDetails(table1, this)">
+		<label for="table1" style="font-size: 28px">Table-1</label>
+		<br>
+		</br>
+		Rs.<label for="rs" id="bill"> 0 </label> | Total Items:<label for="items" id="itemCount"> 0 </label>
+	</div>
+	<div class="table-names" id="table2" ondrop="drop(event, this)" ondragover="allowDrop(event)" onclick="getOrderDetails(table2, this)">
+		<label for="table2" style="font-size: 28px"> Table-2</label>
+		<br>
+		</br>
+		Rs.<label for="rs" id="bill"> 0 </label> | Total Items:<label for="items" id="itemCount"> 0 </label>
+	</div>
+	<div class="table-names" id="table3" ondrop="drop(event, this)" ondragover="allowDrop(event)" onclick="getOrderDetails(table3, this)">
+		<label for="table3" style="font-size: 28px">Table-3</label>
+		<br>
+		</br>
+		Rs.<label for="rs" id="bill"> 0 </label> | Total Items:<label for="items" id="itemCount"> 0 </label></span>
+	</div>
+</div>
+<div class="menu">
+	<h3> Menu </h3>
+	<input type="search" id="searchMenu" placeholder="Search menu... by course,by food" onkeyup="searchMenu()">
+	<div class="menu-names" id="menu1" draggable="true" ondragstart="drag(event)">
+		<label for="tableName" id="dish" style="font-size: 28px">Crusty Garlic Focaccia with melted cheese </label>
+		<br>
+		</br>
+		<label for="rs" id="cost"> 105.00 </label>
+	</div>
+	<div class="menu-names" id="menu2" draggable="true" ondragstart="drag(event)">
+		<label for="tableName" id="dish" style="font-size: 28px">French fries </label>
+		<br>
+		</br>
+		<label for="rs" id="cost"> 205.00 </label>
+	</div>
+	<div class="menu-names" id="menu3" draggable="true" ondragstart="drag(event)">
+		<label for="tableName" id="dish" style="font-size: 28px">Home Country Fries with Herbs and Chilli Flakes </label>
+		<br>
+		</br>
+		<label for="rs" id="cost"> 305.00 </label>
+	</div>
+	<div class="menu-names" id="menu4" draggable="true" ondragstart="drag(event)">
+		<label for="tableName" id="dish" style="font-size: 28px">French fries with Cheese & Jalapenos </label>
+		<br>
+		</br>
+		<label for="rs" id="cost"> 405.00 </label>
+	</div>
+</div>
+<div id="myModal" class="modal">
+	<!-- Modal content -->
+	<div class="modal-content">
+		<div class="modal-header">
+			<span class="close">&times;</span>
+			<p id="orderHeading">
+			</p>
+		</div>
+		<div class="modal-body">
+			<table id="tableData" style="width: 100%">
+			<tr>
+				<tbody id="popup-body">
+				</tbody>
+			</tr>
+			</table>
+			<label id="totalcost" class="totalcost"></label>
+		</div>
+		<div class="modal-footer" id="closeSession">
+		
+		</div>
+	</div>
+</div>
+	<script type="text/javascript" src="script.js"> </script>
+	</html>
