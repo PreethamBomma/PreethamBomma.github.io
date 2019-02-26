@@ -202,7 +202,7 @@ function removeItem(t, i, tableId) {
     console.log(tables[tableId.id].dishes);
     console.log("checking splice");
     for (let k = 0; k < tables[tableId.id].dishes.length; k++) {
-        if (tables[tableId.id].dishes[k] ! = document.getElementById("popup-body").rows[i].cells[1].innerHTML)
+        if (tables[tableId.id].dishes[k] != document.getElementById("popup-body").rows[i].cells[1].innerHTML)
             continue;
         var indexToRemove = k;
     }
